@@ -12,6 +12,8 @@ webhook = Webhook(app, os.getenv('ENDPOINT'), os.getenv('SECRET'))
 
 @webhook.hook()
 def on_push(data):
+    # TODO: Extend so we can run a specific script for each repository
+
     subprocess.run([os.getenv('ONPUSH_SCRIPT')])
 
 @app.route('/', defaults={'path': ''})
