@@ -18,6 +18,3 @@ def on_push(data):
 @app.route('/<path:path>')
 def catch_all_route(path):
     return ''
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
